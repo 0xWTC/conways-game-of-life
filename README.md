@@ -16,7 +16,10 @@ The game is a simple cellular automaton. The rules are:
 * Any live cell with more than three live neighbours dies, as if by over-population.
 * Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 
-## Why I used PyGame
+## How to run it
+
+in the terminal run
+`python life.py`
 
 
 

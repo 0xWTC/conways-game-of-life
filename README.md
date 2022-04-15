@@ -1,7 +1,7 @@
 # conways-game-of-life
  Conway's Game of Life in Python using PyGame
 
-![Animation of Conway's Game of Life using PyGame](https://media.giphy.com/media/6nvUE7Aitgju1VbztH/giphy.gif)
+![Animation of Conway's Game of Life using PyGame](https://media.giphy.com/media/r8bineRqHurHNwHE5g/giphy-downsized-large.gif)
 *Animation of Conway's Game of Life using PyGame*
 
 ## Requirements

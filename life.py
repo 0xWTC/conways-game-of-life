@@ -12,7 +12,7 @@ def main():
     pygame.display.set_caption("Conway's Game of Life")
     clock = pygame.time.Clock()
     running = True
-    grid = [[0 for x in range(100)] for y in range(100)]
+    grid = [[0 for _ in range(100)] for _ in range(100)]
     for i in range(100):
         for j in range(100):
             grid[i][j] = random.randint(0, 1)
@@ -31,9 +31,8 @@ def main():
                 if grid[i][j] == 1:
                     if count_neighbors(grid, i, j) < 2 or count_neighbors(grid, i, j) > 3:
                         grid[i][j] = 0
-                else:
-                    if count_neighbors(grid, i, j) == 3:
-                        grid[i][j] = 1
+                elif count_neighbors(grid, i, j) == 3:
+                    grid[i][j] = 1
         clock.tick(10)
     pygame.quit()
 
@@ -44,7 +43,13 @@ def count_neighbors(grid, x, y):
     count = 0
     for i in range(x - 1, x + 2):
         for j in range(y - 1, y + 2):
-            if i >= 0 and i < 100 and j >= 0 and j < 100 and not (i == x and j == y):
+            if (
+                i >= 0
+                and i < 100
+                and j >= 0
+                and j < 100
+                and (i != x or j != y)
+            ):
                 count += grid[i][j]
     return count
 
